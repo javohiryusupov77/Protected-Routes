@@ -8,6 +8,7 @@ import ProtectedRoute from "./components/protected-route/ProtectedRoute";
 import Today from "./components/dashboard/Dashboard";
 import Students from "./components/students/Student";
 import About from "./components/about/about";
+import NotFound from "./components/notfound/notfound";
 function App() {
   return (
     <div>
@@ -16,15 +17,6 @@ function App() {
           <ul>
             <li>
               <NavLink to="/">Home</NavLink>
-            </li>
-            <li>
-              <NavLink to="/About">About</NavLink>
-            </li>
-            <li>
-              <NavLink to="/today">Today</NavLink>
-            </li>
-            <li>
-              <NavLink to="/students">Students</NavLink>
             </li>
           </ul>
 
@@ -44,6 +36,7 @@ function App() {
             <Route path="/students" element={<Students />} />
           </Route>
           <Route path="/login" element={<Login />} />
+          <Route path="/*" element={<NotFound />} />
         </Routes>
       </main>
     </div>

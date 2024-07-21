@@ -24,7 +24,7 @@ export default function LogoutButton({ children }) {
       },
     });
     Toast.fire({
-      icon: "success",
+      icon: "error",
       title: "Login and Password has been removed",
     });
   }
